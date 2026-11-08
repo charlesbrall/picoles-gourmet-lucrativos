@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
-    "vercel:build": "vite build",
+    "vercel:build": "npx vite build",
     "vercel:dev": "vercel dev"
   },
   "dependencies": {
