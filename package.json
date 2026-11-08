@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "npx vite build",
+    "build": "node node_modules/vite/bin/vite.js build",
     "start": "node server.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
-    "vercel:build": "npx vite build",
+    "vercel:build": "node node_modules/vite/bin/vite.js build",
     "vercel:dev": "vercel dev"
   },
   "dependencies": {
