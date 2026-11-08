@@ -1,0 +1,346 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fff8f3;
+  --card: #ffffff;
+  --tx: #2b1d1a;
+  --mut: #7a6660;
+  --pri: #e8426b;
+  --pri2: #c42f55;
+  --ac: #ffb703;
+  --bd: #f1ddd2;
+  --ok: #1f9d63;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@theme {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-berry-50: #fff1f6;
+  --color-berry-100: #ffe4ee;
+  --color-berry-500: #e8426b;
+  --color-berry-600: #c42f55;
+  --color-berry-700: #a90a53;
+  --color-cacao: #2b1d1a;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--tx);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Template standard utility classes */
+.w {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+section {
+  padding: 38px 0;
+}
+
+.template-h1 {
+  font-size: clamp(1.7rem, 6vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0.4em 0;
+  font-weight: 800;
+}
+
+.template-h2 {
+  font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+  text-align: center;
+  font-weight: 800;
+}
+
+.top-bar {
+  background: var(--pri);
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 9px 12px;
+}
+
+.hero-section {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.tag-pill {
+  display: inline-block;
+  background: var(--ac);
+  color: #2b1d1a;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+.sub-text {
+  color: var(--mut);
+  font-size: 1.05rem;
+}
+
+.ph-box {
+  border: 2px dashed var(--bd);
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--mut);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.9rem;
+  min-height: 150px;
+}
+
+.vid-container {
+  aspect-ratio: 16/9;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 2px dashed var(--bd);
+  background: #000;
+}
+
+.template-btn {
+  display: block;
+  background: var(--pri);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 800;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  margin-top: 16px;
+  box-shadow: 0 4px 0 var(--pri2);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  width: 100%;
+}
+
+.template-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--pri2);
+}
+
+.grid-cards {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card-box {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.card-box h3 {
+  margin: 0.1em 0 0.3em;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.card-box p {
+  margin: 0;
+  color: var(--mut);
+  font-size: 0.95rem;
+}
+
+ul.ck-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.ck-list li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+}
+
+ul.ck-list li:before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+}
+
+ul.ck-list.no-items li:before {
+  content: "➖" !important;
+}
+
+.mod-row {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .mod-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mod-row:nth-child(even) .ph-box {
+    order: 2;
+  }
+}
+
+.plans-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: stretch;
+}
+
+.plan-card {
+  background: var(--card);
+  border: 2px solid var(--bd);
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card.hot-plan {
+  border-color: var(--pri);
+}
+
+.badge-tag {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pri);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.plan-card h3 {
+  margin: 0.2em 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.old-price {
+  text-align: center;
+  color: var(--mut);
+  text-decoration: line-through;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+.price-text {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--pri);
+  line-height: 1.1;
+}
+
+.plan-card ul {
+  flex: 1;
+  margin: 12px 0;
+}
+
+details.faq-item {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+
+details.faq-item summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+details.faq-item p {
+  margin: 0.6em 0 0;
+  color: var(--mut);
+}
+
+.gar-box {
+  background: var(--card);
+  border: 2px solid var(--ok);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.who-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+}
+
+.who-grid .who-img {
+  min-height: 110px;
+  height: 110px;
+  border-radius: 50%;
+  width: 110px;
+  object-fit: cover;
+  border: 2px solid var(--bd);
+}
+
+.note-text {
+  font-size: 0.75rem;
+  color: var(--mut);
+  text-align: center;
+  margin-top: 8px;
+}
+
+footer.template-footer {
+  text-align: center;
+  color: var(--mut);
+  font-size: 0.8rem;
+  padding: 24px 18px 40px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #f1b3cc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e8426b;
+}
+
+/* Tenta esconder o container do badge */
+#netlify-badge,
+.netlify-badge,
+[data-netlify-badge] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}

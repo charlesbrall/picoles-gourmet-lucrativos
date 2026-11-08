@@ -1,0 +1,8 @@
+{
+  "name": "Remix Picolé Gourmet em Casa v3",
+  "description": "Método completo passo a passo para fazer picolés gourmet cremosos sem fogão, sem ovos e com mais de 15 sabores irresistíveis para família ou renda extra.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

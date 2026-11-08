@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Picolé Gourmet em Casa</title>
+<style>
+:root{--bg:#fff4f8;--card:#fff;--tx:#2a1620;--mut:#6f5663;--bd:#f3d3e0;--pk:#e6177a;--pk2:#ff5fa8;--gd:#ffb800;--gr:#16a34a;--rd:#d92d2d;--hero:#ffe3ef;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a0f15;--card:#27171f;--tx:#fbeef4;--mut:#cfb3c1;--bd:#42262f;--hero:#2d1521;--gr:#4ade80;--rd:#ff6b6b}}
+:root[data-theme="dark"]{--bg:#1a0f15;--card:#27171f;--tx:#fbeef4;--mut:#cfb3c1;--bd:#42262f;--hero:#2d1521;--gr:#4ade80;--rd:#ff6b6b}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17.5px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:640px;margin:0 auto;padding:0 20px}
+section{padding:34px 0}
+h1{font-size:2.05rem;line-height:1.12;margin:12px 0;font-weight:900}
+h2{font-size:1.55rem;line-height:1.15;margin:0 0 14px;font-weight:900}
+em{font-style:normal;color:var(--pk)}
+.hero{background:var(--hero);text-align:center;padding:28px 0 22px}
+.kick{display:inline-block;background:var(--pk);color:#fff;font-weight:800;font-size:.76rem;letter-spacing:.5px;padding:5px 12px;border-radius:99px}
+.sub{color:var(--mut);font-size:1.1rem}
+.ph{margin:16px auto 0;width:220px;height:220px;border-radius:20px;background:var(--card);border:2px dashed var(--pk);display:flex;align-items:center;justify-content:center;text-align:center;font-size:.8rem;color:var(--mut);padding:14px}
+.btn{display:block;background:linear-gradient(180deg,var(--pk2),var(--pk));color:#fff;text-align:center;text-decoration:none;font-weight:900;font-size:1.12rem;padding:18px;border-radius:14px;margin:20px 0;box-shadow:0 5px 0 #a50f58}
+.btn small{display:block;font-weight:600;font-size:.78rem;opacity:.95}
+.scene{background:var(--card);border-left:5px solid var(--pk);border-radius:0 14px 14px 0;padding:16px 18px;margin:14px 0}
+.scene p{margin:0 0 10px}.scene p:last-child{margin:0}
+.big{font-size:1.2rem;font-weight:800}
+.ok{list-style:none;padding:0;margin:0}
+.ok li{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 14px 14px 46px;margin:10px 0;position:relative}
+.ok li:before{content:"✔";position:absolute;left:14px;top:14px;color:var(--gr);font-weight:900}
+.ok b{display:block}.ok span{color:var(--mut);font-size:.95rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.two div{border-radius:14px;padding:14px;font-size:.93rem;background:var(--card);border:2px solid var(--pk)}
+.two h3{margin:0 0 6px;font-size:1.02rem}.two p{margin:4px 0;color:var(--mut)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.chip{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:9px 10px;font-size:.9rem;font-weight:700}
+.bonus{background:var(--card);border:2px solid var(--gd);border-radius:14px;padding:14px;margin:12px 0}
+.bonus b{color:var(--pk)}.bonus p{margin:4px 0 0;color:var(--mut);font-size:.94rem}
+.stack{background:var(--card);border:3px solid var(--pk);border-radius:18px;padding:18px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--bd);font-size:.95rem}
+.row b{white-space:nowrap}
+.tot{text-align:center;margin-top:14px}.tot s{color:var(--mut)}
+.tot big{display:block;font-size:3.3rem;line-height:1.05;font-weight:900;color:var(--pk)}
+.tag{text-align:center;color:var(--mut);font-size:.86rem;margin:0}
+.warn{background:rgba(255,184,0,.18);border:1px solid var(--gd);border-radius:12px;padding:12px;text-align:center;font-weight:700;margin:14px 0}
+.alt{background:var(--card);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.me{display:flex;gap:14px;align-items:center}
+.av{flex:none;width:86px;height:86px;border-radius:50%;background:var(--bg);border:2px dashed var(--pk);display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--mut);text-align:center}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}.q p{margin:0;color:var(--mut)}
+details{background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:12px 16px;margin:10px 0}
+summary{font-weight:800;cursor:pointer}details p{color:var(--mut);margin:8px 0 0}
+.note{text-align:center;color:var(--mut);font-size:.82rem}
+footer{text-align:center;color:var(--mut);font-size:.78rem;padding:24px 0 40px}
+</style>
+</head>
+<body>
+
+<div class="hero"><div class="w">
+<span class="kick">PARA QUEM AMA PICOLÉ GOURMET</span>
+<h1>Faça em casa o picolé gourmet que você paga caro na loja… <em>e se quiser, venda</em></h1>
+<p class="sub">Uma base cremosa que <b>não vai ao fogo, não leva ovo</b> e vira mais de 15 sabores. Só batedeira e freezer doméstico. Primeiro pra você e pra sua família. Depois, se der vontade, vira renda extra.</p>
+<div class="ph">[FOTO DO SEU PICOLÉ COM CASQUINHA]</div>
+<a class="btn" href="#comprar">QUERO FAZER OS MEUS<small>Acesso imediato · Pix ou cartão</small></a>
+</div></div>
+
+<section><div class="w">
+<h2>Sabe aquela <em>vontade</em>?</h2>
+<div class="scene">
+<p>Você vê um picolé gourmet cheio de recheio, casquinha de chocolate e cobertura crocante.</p>
+<p>Olha o preço. Pensa “é só um picolé”. Paga mesmo assim… ou desiste.</p>
+<p class="big">E se o freezer da sua casa tivesse isso sempre à mão, do jeito que você gosta?</p>
+</div>
+<p>Com a base certa, você escolhe o sabor, controla o doce e ainda surpreende as visitas. Sem receita complicada e sem passar a tarde na cozinha.</p>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Por que é <em>fácil</em> de fazer</h2>
+<ul class="ok">
+<li><b>Colocou na batedeira, começou</b><span>Sem fogo e sem processo complicado.</span></li>
+<li><b>Sem ovo</b><span>Ótimo para quem tem intolerância e mais tranquilidade na hora de fazer.</span></li>
+<li><b>Base neutra, sabor do seu jeito</b><span>Uma base só, dezenas de sabores. Cada picolé fica com a sua cara.</span></li>
+<li><b>Dá pra fazer em pequena ou grande quantidade</b><span>Seis para o fim de semana ou dezenas pra festa.</span></li>
+<li><b>Casquinha fininha e bonita</b><span>Aquele acabamento de loja, feito na sua cozinha.</span></li>
+</ul>
+</div></section>
+
+<section><div class="w">
+<h2>Mais de <em>15 sabores</em> pra você escolher</h2>
+<div class="grid">
+<div class="chip">🍫 Ninho com Nutella</div><div class="chip">🌰 Pistache</div>
+<div class="chip">🍓 Morango Cravejado</div><div class="chip">🍬 Paçoca</div>
+<div class="chip">🍪 Oreo com Nutella</div><div class="chip">🍋 Torta de Limão</div>
+<div class="chip">🍫 Prestígio</div><div class="chip">🥜 Biscoff</div>
+<div class="chip">🍫 Ovomaltine</div><div class="chip">🍮 Doce de Leite</div>
+<div class="chip">🌹 Romeu e Julieta</div><div class="chip">🍫 Chocolate Crocante</div>
+</div>
+<p class="note" style="margin-top:10px">…e mais sabores dentro da formação.</p>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Comece <em>pra você</em>. Cresça se quiser.</h2>
+<div class="two">
+<div><h3>🏠 Pra consumo</h3><p>Faça pra sua família, festa de criança e fim de semana.</p><p>Economize e escolha o sabor.</p></div>
+<div><h3>💰 Pra vender</h3><p>Muita gente começa vendendo pra vizinhos, amigos e encomendas.</p><p>Você já sai com a base testada.</p></div>
+</div>
+<p style="margin-top:14px">Você não precisa decidir agora. Aprenda, faça pra você e <b>veja como as pessoas reagem</b>. Se pedirem pra comprar, você já sabe o que fazer.</p>
+<p class="note">(Vender depende do seu esforço, preço e região. Não existe promessa de ganho, mas você parte de uma base pronta.)</p>
+</div></section>
+
+<section><div class="w">
+<h2>Você leva também <em>5 bônus</em></h2>
+<div class="bonus"><b>🎁 Bônus 1 · Morango Cravejado</b><p>O sabor do momento, passo a passo. Valor R$ 14</p></div>
+<div class="bonus"><b>🎁 Bônus 2 · Lista de fornecedores</b><p>Onde comprar bem e gastar menos. Valor R$ 19</p></div>
+<div class="bonus"><b>🎁 Bônus 3 · Planilha de custo e preço</b><p>Descubra o custo de cada picolé e quanto cobrar, caso queira vender. Valor R$ 12</p></div>
+<div class="bonus"><b>🎁 Bônus 4 · Guia: do consumo à renda extra</b><p>Primeiros passos, embalagem e como oferecer pros primeiros clientes. Valor R$ 19</p></div>
+<div class="bonus"><b>🎁 Bônus 5 · Suporte por 2 semanas</b><p>Dúvida? Pergunte direto no WhatsApp. Valor R$ 29</p></div>
+</div></section>
+
+<section class="alt" id="comprar"><div class="w">
+<h2 style="text-align:center">Menos que <em>um picolé gourmet</em> na loja</h2>
+<div class="stack">
+<div class="row"><span>Formação Picolé Gourmet</span><b>R$ 47</b></div>
+<div class="row"><span>🎁 Morango Cravejado</span><b>R$ 14</b></div>
+<div class="row"><span>🎁 Fornecedores</span><b>R$ 19</b></div>
+<div class="row"><span>🎁 Planilha de custo e preço</span><b>R$ 12</b></div>
+<div class="row"><span>🎁 Guia: do consumo à renda extra</span><b>R$ 19</b></div>
+<div class="row"><span>🎁 Suporte no WhatsApp</span><b>R$ 29</b></div>
+<div class="tot"><s>De R$ 140,00</s><big>R$ 9,90</big><p class="tag">Pagamento único · acesso vitalício</p></div>
+<div class="warn">⏳ Preço de lançamento até [DATA]. Depois volta para R$ [PREÇO NORMAL].</div>
+<a class="btn" href="#">SIM, QUERO MEU ACESSO<small>7 dias de garantia · compra segura</small></a>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>Garantia de <em>7 dias</em></h2>
+<p>Assista, faça a receita e prove. Se não gostar por qualquer motivo, devolvo <b>todo o seu dinheiro</b>, sem perguntas. O risco é meu.</p>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Quem vai te <em>ensinar</em></h2>
+<div class="me"><div class="av">[SUA FOTO]</div>
+<p style="margin:0">[Conte em 3 linhas a sua história: como aprendeu, o que já fez e por que criou essa formação. Seja verdadeira e específica.]</p></div>
+</div></section>
+
+<section><div class="w">
+<h2>Quem <em>já fez</em></h2>
+<div class="q"><p>“[Depoimento real, com foto do picolé da aluna]”<br><b>— Nome, cidade</b></p></div>
+<div class="q"><p>“[Outro depoimento real]”<br><b>— Nome, cidade</b></p></div>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Ainda com <em>dúvida</em>?</h2>
+<details><summary>Preciso de equipamento profissional?</summary><p>Não. Dá para começar com batedeira e freezer doméstico.</p></details>
+<details><summary>Nunca fiz picolé. Consigo?</summary><p>Sim. É passo a passo em vídeo, pensado pra quem está começando.</p></details>
+<details><summary>Posso vender depois?</summary><p>Pode. Mas as regras sanitárias para vender alimentos variam por cidade. Consulte a vigilância sanitária ou a prefeitura da sua região antes de começar.</p></details>
+<details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia e o dinheiro de volta.</p></details>
+<a class="btn" href="#">QUERO COMEÇAR AGORA<small>R$ 9,90 · acesso imediato</small></a>
+</div></section>
+
+<footer><div class="w">© Seu nome ou marca · Todos os direitos reservados</div></footer>
+</body>
+</html>
