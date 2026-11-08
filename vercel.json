@@ -1,1 +1,1 @@
-{"buildCommand":"npm run build","outputDirectory":"dist","installCommand":"npm install --legacy-peer-deps"} 
+{"buildCommand":"npm run build","outputDirectory":"dist","installCommand":"NODE_OPTIONS=--max-old-space-size=4096 npm ci --legacy-peer-deps --prefer-offline --no-audit --no-fund"} 
